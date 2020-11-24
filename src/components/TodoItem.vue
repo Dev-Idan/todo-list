@@ -2,9 +2,9 @@
   <div class="item w-100 py-2 mb-3 text-left pr-2 pl-3 rounded-lg">
     <div class="d-flex flex-row align-items-center">
 
-      <label class="b-contain mb-3 mr-2">
+      <label class="checkbox-container mb-3 mr-2">
         <input @click="toggleDone" type="checkbox" :checked="todo.done">
-        <div class="b-input"></div>
+        <div class="checkbox-input"></div>
       </label>
       
       <span :class="{ done: todo.done }">
@@ -71,23 +71,23 @@ export default {
 		transform: translate(1px,1px);
 	}
 
-  .b-contain *, .b-contain *::before, .b-contain *::after {
+  .checkbox-container *, .checkbox-container *::before, .checkbox-container *::after {
 	box-sizing: content-box !important;
 }
 
-.b-contain input {
+.checkbox-container input {
 	position: absolute;
 	z-index: -1;
 	opacity: 0;
 }
 
-.b-contain span {
+.checkbox-container span {
 	line-height: 1.54;
 	font-size: 1rem;
 	font-family: inherit;
 }
 
-.b-contain {
+.checkbox-container {
 	display: table;
 	position: relative;
 	padding-left: 1.8rem;
@@ -95,7 +95,7 @@ export default {
 	margin-bottom: .5rem;
 }
 
-.b-contain input[type="checkbox"] ~ .b-input {
+.checkbox-container input[type="checkbox"] ~ .checkbox-input {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -107,7 +107,7 @@ export default {
 	border-radius: 0.125rem;
 }
 
-.b-contain input[type="checkbox"] ~ .b-input::after {
+.checkbox-container input[type="checkbox"] ~ .checkbox-input::after {
 	content: '';
 	position: absolute;
 	display: none;
@@ -121,41 +121,41 @@ export default {
 	transform: rotate(45deg);
 }
 
-.b-contain input:disabled ~ .b-input::after {
+.checkbox-container input:disabled ~ .checkbox-input::after {
 	border-color: rgba(135, 149, 161, 1);
 }
 
-.b-contain input:checked ~ .b-input::after {
+.checkbox-container input:checked ~ .checkbox-input::after {
 	display: block;
 }
 
-.b-contain:hover input ~ .b-input,
-.b-contain input:focus ~ .b-input {
+.checkbox-container:hover input ~ .checkbox-input,
+.checkbox-container input:focus ~ .checkbox-input {
 	background: rgb(231, 238, 243);
 }
 
-.b-contain input:focus ~ .b-input {
+.checkbox-container input:focus ~ .checkbox-input {
 	box-shadow: 0 0 0 2px rgba($anchor,0.5);
 }
 
-.b-contain input:checked ~ .b-input {
+.checkbox-container input:checked ~ .checkbox-input {
 	background: rgba($anchor, 1);
 	border-color: rgba($anchor, 1);
 }
 
-.b-contain input[type="checkbox"]:disabled ~ .b-input {
+.checkbox-container input[type="checkbox"]:disabled ~ .checkbox-input {
 	background: rgba(241, 245, 248, 1);
 	border-color: rgba(184, 194, 204, 1);
 	opacity: 0.6;
 	cursor: not-allowed;
 }
 
-.b-contain input:checked:focus ~ .b-input, .b-contain:hover input:not([disabled]):checked ~ .b-input {
+.checkbox-container input:checked:focus ~ .checkbox-input, .checkbox-container:hover input:not([disabled]):checked ~ .checkbox-input {
 	background: rgba($anchor, 1);
 	border-color: rgba($anchor, 1);
 }
 
-.b-contain .b-input::before {
+.checkbox-container .checkbox-input::before {
 	content: '';
 	display: block;
 	position: absolute;
@@ -206,23 +206,23 @@ export default {
   	}
 }
 
-.b-contain input + .b-input::before {
+.checkbox-container input + .checkbox-input::before {
 	animation: b-ripple 250ms ease-out;
 }
 
-.b-contain input:checked + .b-input::before {
+.checkbox-container input:checked + .checkbox-input::before {
 	animation-name: b-ripple-duplicate;
 }
 
-.b-contain .b-input::before {
+.checkbox-container .checkbox-input::before {
 	visibility: hidden;
 }
 
-.b-contain input:focus + .b-input::before {
+.checkbox-container input:focus + .checkbox-input::before {
 	visibility: visible;
 }
 
-.b-contain:first-child .b-input::before {
+.checkbox-container:first-child .checkbox-input::before {
 	visibility: hidden;
 }  
 </style>
