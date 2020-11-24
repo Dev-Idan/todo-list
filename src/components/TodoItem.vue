@@ -1,13 +1,13 @@
 <template>
   <div class="item w-100 py-2 mb-3 text-left pr-2 pl-3 rounded-lg">
-    <div class="d-flex flex-row align-items-center">
+    <div class="d-flex flex-row align-items-center todo-contain">
 
       <label class="checkbox-container mb-3 mr-2">
         <input @click="toggleDone" type="checkbox" :checked="todo.done">
         <div class="checkbox-input"></div>
       </label>
       
-      <span :class="{ done: todo.done }">
+      <span :class="{ done: todo.done }" class="todo-title">
         {{ todo.title }}
       </span>
 
@@ -43,6 +43,7 @@ export default {
     color: $anchor;
     box-shadow: 0 0 5px 3px rgba(0,0,0,0.25);
     font-size: 2rem;
+		word-break:break-word;
   }
 
   .item:hover {

@@ -1,4 +1,7 @@
-# todolist
+# Vuex Todolist
+
+## Working demo:
+https://vuex-todo-list.vercel.app/
 
 ## Project setup
 ```
