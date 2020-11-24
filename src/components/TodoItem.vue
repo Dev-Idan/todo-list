@@ -26,10 +26,10 @@ export default {
 	},
 	methods: {
 		toggleDone(){
-			this.$store.dispatch('toggleDone', this.index);
+			this.$store.dispatch('todolist/toggleDone', this.index);
 		},
 		deleteTodo(){
-			this.$store.dispatch('deleteTodo', this.index);
+			this.$store.dispatch('todolist/deleteTodo', this.index);
 		}
 	}
 }

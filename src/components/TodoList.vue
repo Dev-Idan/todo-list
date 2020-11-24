@@ -26,7 +26,7 @@ export default {
       this.loading = false;
     },500);
   },
-  computed: mapState(['todos']),
+  computed: mapState('todolist',['todos']),
   components: {
     TodoItem,
     HalfCircleSpinner,

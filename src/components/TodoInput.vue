@@ -12,14 +12,14 @@
 import { mapActions } from 'vuex';
 
 export default {
-  methods: mapActions(['addTodo']),
+  methods: mapActions('todolist',['addTodo']),
   computed: {
     newTodo: {
       get() {
-        return this.$store.state.newTodo;
+        return this.$store.state.todolist.newTodo;
       },
       set(value) {
-        this.$store.dispatch('setTodo',value);
+        this.$store.dispatch('todolist/setTodo',value);
       }
     }
   },

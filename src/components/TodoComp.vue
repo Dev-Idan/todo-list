@@ -28,7 +28,7 @@ export default {
     TodoList
   },
   created() {
-    this.$store.dispatch('obtainTodos');
+    this.$store.dispatch('todolist/obtainTodos');
   }
 }
 </script>
